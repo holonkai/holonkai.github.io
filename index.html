@@ -1,14 +1,21 @@
 <!DOCTYPE html>
-<html>
+<div id="gate">
+    <div class="login-container">
+        <input type="password" id="pw" placeholder="Enter Password">
+        <button onclick="check()">Unlock</button>
+    </div>
+</div>
+
    <style>
-  body { background-color: #f6deef; }
+  /* body { background-color: #f6deef; } */
   body {
   background-image: url("flowerpattern.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 900px;
+  background-size: 1000px;
   background-position: center;
 }
+
 </style>
   <head>
     <title>Building Angelcircuits Webpage</title>
@@ -31,16 +38,29 @@
     </div>
     <div class="row">
       <div class="col-2">
-        <h1>Building Angelcircuits <br> Webpageଘ( ᴗ͈   ᴗ͈)ഒ</h1>
+        <h1>Welcome to Angelcircuits <br> Webpageଘ( ᴗ͈   ᴗ͈)ഒ</h1>
         <p>Portfolio</p>
       </div>
       <div class="col-2">
         <img src="harlowangel.png">
-        
       </div>
     </div>
     </div>
-    
+    <script>
+        function check() {
+            var password = document.getElementById("pw").value;
+            if (password === "harlow") {
+                var gate = document.getElementById("gate");
+                gate.style.opacity = "0";
+                setTimeout(function() {
+                    gate.remove();
+                    document.body.style.overflow = "auto";
+                }, 600);
+            } else {
+                alert("Incorrect.");
+            }
+        }
+    </script>
     
   </body>
 </html>
