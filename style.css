@@ -1,8 +1,5 @@
-body 
-.flex-container {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    height: 50px; 
-    background:rgb(255, 182, 193) ; } 
-    
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
