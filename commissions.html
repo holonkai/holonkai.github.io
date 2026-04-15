@@ -27,7 +27,7 @@
             <section class="shop-grid">
     <div class="shop-item">
         <div class="item-card">
-            <img src="harlowangel.png" alt="Product Name">
+            <img src="harlowangelwhitebackground.jpg" alt="Product Name">
             <div class="item-info">
                 <h3>PinkAngel</h3>
                 <p class="price"></p>
@@ -44,50 +44,49 @@
             </div>
         </div>
     </div>
-
-    <div class="shop-item">
-        <div class="item-card">
-            <img src="harlowangel.png" alt="Product Name">
-            <div class="item-info">
-                <h3>Placeholder</h3>
-                <p class="price"></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="shop-item">
-        <div class="item-card">
-            <img src="harlowangel.png" alt="Product Name">
-            <div class="item-info">
-                <h3>Placeholder</h3>
-                <p class="price"></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="shop-item">
-        <div class="item-card">
-            <img src="harlowangel.png" alt="Product Name">
-            <div class="item-info">
-                <h3>Placeholder</h3>
-                <p class="price"></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="shop-item">
-        <div class="item-card">
-            <img src="harlowangel.png" alt="Product Name">
-            <div class="item-info">
-                <h3>Placeholder</h3>
-                <p class="price"></p>
-            </div>
-        </div>
-    </div>
-
-    
-
+             
     </section>
         </div>
     </main>
 </div>
+<div id="lightbox" class="lightbox">
+    <span class="close-btn">&times;</span>
+    <img id="lightbox-img" src="" alt="Popup View">
+</div>
+<script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close-btn');
+
+    const portfolioImages = document.querySelectorAll('.item-card img');
+
+    portfolioImages.forEach(img => {
+        img.style.cursor = 'pointer';
+
+        img.addEventListener('click', () => {
+            lightbox.classList.add('active');
+            lightboxImg.src = img.src;
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    const closeLightbox = () => {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = 'auto'; 
+    };
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox || e.target === closeBtn) {
+            closeLightbox();
+        }
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === "Escape") {
+            closeLightbox();
+        }
+    });
+</script>
+</html>
