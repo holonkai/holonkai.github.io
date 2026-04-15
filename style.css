@@ -86,7 +86,7 @@ h2 {
 
 .nav-bar a {
     text-decoration: none;
-    font-size: 30px;
+    font-size: 20px;
     padding: 20px 20px; 
     display: inline-block; 
     
@@ -117,6 +117,50 @@ h2 {
     height: auto;
     margin-top: 20px;
 }
+
+.shop-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.item-card {
+    background: rgba(255, 255, 255, 0.6); 
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.item-card:hover {
+    transform: translateY(-5px); 
+}
+
+.item-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.item-info h3 {
+    font-size: 1.1rem;
+    margin: 10px 0;
+    color: #555;
+}
+
+.price {
+    font-weight: bold;
+    color: #b5838d; 
+    margin-bottom: 10px;
+}
+
 
 @media (min-width: 1000px) {
     .nav-bar li {
