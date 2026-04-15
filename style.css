@@ -12,9 +12,9 @@ body {
     background-size: 600px; 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1600px) {
     body {
-        background-size: 300px; 
+        background-size: 1600px; 
     }
 }
 
