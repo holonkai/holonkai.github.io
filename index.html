@@ -1,68 +1,68 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Angelcircuits Webpage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <div id="gate">
-  <div>
-    <h2> ────୨ৎ────ENTER ANGELCIRCUITS CYBER-SPACE────୨ৎ────</h2>
-  </div>
-    <div class="login-container">
-        <input type="password" id="pw" placeholder="Enter Password">
-        <button onclick="check()">Unlock</button>
+    <div class="gate-content">
+        <h2>────୨ৎ────ENTER ANGELCIRCUITS CYBER-SPACE────୨ৎ────</h2>
+        <div class="login-container">
+            <input type="password" id="pw" placeholder="Enter Password">
+            <button onclick="check()">Unlock</button>
+        </div>
     </div>
 </div>
 
-   <style>
-  body {
-  background-image: url("flowerpattern.png");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 1300px;
-  background-position: center;
-}
+<div class="container">
+    <header class="nav-bar">
+        <nav>
+            <ul>
+                <li><a href="#">⊹ ࣪ ˖ ꒰ঌ ໒꒱Home⊹ ࣪ ˖ ꒰ঌ ໒꒱</a></li>
+                <li><a href="#">⊹ ࣪ ˖ ꒰ঌ ໒꒱About Artist⊹ ࣪ ˖ ꒰ঌ ໒꒱</a></li>
+                <li><a href="#">⊹ ࣪ ˖ ꒰ঌ ໒꒱Commissions⊹ ࣪ ˖ ꒰ঌ ໒꒱</a></li>
+                <li><a href="#">⊹ ࣪ ˖ ꒰ঌ ໒꒱Socials⊹ ࣪ ˖ ꒰ঌ ໒꒱</a></li>
+            </ul>
+        </nav>
+    </header>
 
-</style>
-  <head>
-    <title>Building Angelcircuits Webpage</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-     <h1></h1>
-    <div class="container">
-      <div class="nav bar";>
-      <div class="logo">  
-      </div>
-      <nav>
-        <ul>
-          <li> <a href="">⊹ ࣪ ˖ ꒰ঌ ໒꒱Home⊹ ࣪ ˖ ꒰ঌ ໒꒱ </a></li>
-          <li> <a href="">⊹ ࣪ ˖ ꒰ঌ ໒꒱About Artist⊹ ࣪ ˖ ꒰ঌ ໒꒱</a></li>
-          <li> <a href="">⊹ ࣪ ˖ ꒰ঌ ໒꒱Commissions & Purchases⊹ ࣪ ˖ ꒰ঌ ໒꒱</a></li>
-          <li> <a href="">⊹ ࣪ ˖ ꒰ঌ ໒꒱Socials⊹ ࣪ ˖ ꒰ঌ ໒꒱</a></li>
-        </ul>
-      </nav>
-    </div>
-    <div class="row">
-      <div class="col-2">
-        <h1>Welcome to Angelcircuits <br> Webpageଘ( ᴗ͈   ᴗ͈)ഒ</h1>
-        <p>Portfolio</p>
-      </div>
-      <div class="col-2">
-        <img src="harlowangel.png">
-      </div>
-    </div>
-    </div>
-    <script>
-        function check() {
-            var password = document.getElementById("pw").value;
-            if (password === "harlow") {
-                var gate = document.getElementById("gate");
-                gate.style.opacity = "0";
-                setTimeout(function() {
-                    gate.remove();
-                    document.body.style.overflow = "auto";
-                }, 600);
-            } else {
-                alert("Incorrect.");
-            }
+    <main class="row">
+        <div class="col-text">
+            <h1>Welcome to Angelcircuits <br> Webpageଘ( ᴗ͈ ᴗ͈)ഒ</h1>
+            <p>Portfolio</p>
+        </div>
+        <div class="col-img">
+            <img src="harlowangel.png" alt="Angel Illustration">
+        </div>
+    </main>
+</div>
+
+<script>
+    (function() {
+        if (localStorage.getItem("isAllowed") === "true") {
+            document.write('<style>#gate { display: none !important; }</style>');
+            document.body.style.overflow = "auto";
         }
-    </script>
-    
-  </body>
+    })();
+
+    function check() {
+        var password = document.getElementById("pw").value;
+        if (password === "harlow") {
+            localStorage.setItem("isAllowed", "true");
+            var gate = document.getElementById("gate");
+            gate.style.opacity = "0";
+            setTimeout(function() {
+                gate.remove();
+                document.body.style.overflow = "auto";
+            }, 600);
+        } else {
+            alert("Incorrect.");
+        }
+    }
+</script>
+</body>
 </html>
