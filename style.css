@@ -4,6 +4,16 @@
     box-sizing: border-box;
     color: rgb(67, 67, 67);
 }
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('Ancient\ Medium.ttf') format('woff2');
+  font-size: 40px;
+}
+
+* {
+  font-family: 'MyCustomFont', sans-serif;
+  font-size: 40px;
+}
 @media (max-width: 600px) {
     body {
         background-size: 600px; 
@@ -76,14 +86,15 @@ h2 {
 
 .nav-bar a {
     text-decoration: none;
-    font-size: 18px;
+    font-size: 30px;
     padding: 20px 20px; 
     display: inline-block; 
     
     background-image: url("swords.webp"); 
-    background-size: 40px; 
+    background-size: 50px; 
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 30px;
     
     transition: transform 0.3s ease;
 }
