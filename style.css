@@ -59,12 +59,7 @@ h2 {
 }
 
 .container {
-    ackground: rgba(255, 255, 255, 0.6); /* This adds a soft white tint over the image */
-    backdrop-filter: blur(5px); /* This gives it a cool frosted glass look */
-    border-radius: 20px;
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
     padding: 20px;
 }
 
@@ -102,7 +97,7 @@ h2 {
     margin-top: 20px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1000px) {
     .nav-bar li {
         display: inline-block; 
         margin: 0 20px;
