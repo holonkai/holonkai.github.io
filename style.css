@@ -1,6 +1,13 @@
-body {
-  background-color: #FFFAFA
-  color: black;           
-  font-family: sans-serif;
-  text-align: center;
-}
+body {border-style: solid;}
+.flex-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 50px; } 
+    
+    .flex-item {
+    margin: 5px;
+    padding: 7px;
+    background:rgb(255, 182, 193) ; 
+    height: 20x;
+    }
