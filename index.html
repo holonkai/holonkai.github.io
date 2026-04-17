@@ -50,7 +50,7 @@
 
     function check() {
         var password = document.getElementById("pw").value;
-        if (hash(password) === hash("harlow")) {
+        if (hash(password + "RANDOM_SUFFIX") === hash("harlow" + "RANDOM_SUFFIX")) {
             localStorage.setItem("isAllowed", "true");
             var gate = document.getElementById("gate");
             gate.style.opacity = "0";
