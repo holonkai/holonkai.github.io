@@ -46,11 +46,9 @@
     function check() {
         var password = document.getElementById("pw").value;
         
-        // 1. Scramble the user's input
         var hashedInput = CryptoJS.SHA256(password).toString();
 
-        // 2. Compare it to the pre-scrambled "fingerprint"
-        // No one looking at this code can tell this equals "harlow"
+    
         if (hashedInput === "d3222e96492e62057921614032d96c4d72810a9557b4478345c2293f0b2f8e12") {
             localStorage.setItem("isAllowed", "true");
             document.getElementById("gate").style.display = "none";
