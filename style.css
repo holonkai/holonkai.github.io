@@ -6,7 +6,7 @@
 }
 @font-face {
   font-family: 'MyCustomFont';
-  src: url('Ancient\ Medium.ttf') format('woff2');
+  src: url('PrinceValiant.ttf') format('woff2');
   font-size: 40px;
 }
 
@@ -23,10 +23,11 @@
     min-height: 100vh;
 }
 body {
-    background-image: url("flowerpattern.png");
+    background-image: url("newbackground.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 650px; 
+    background-size: cover; 
+
 }
 
 #gate {
