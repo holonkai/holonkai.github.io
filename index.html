@@ -40,18 +40,19 @@
     </main>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
 <script>
-    (function() {
-        if (localStorage.getItem("isAllowed") === "true") {
-            document.write('<style>#gate { display: none !important; }</style>');
-            document.body.style.overflow = "auto";
-        }
-    })();
+    const correctHash = "d3222e96492e62057921614032d96c4d72810a9557b4478345c2293f0b2f8e12";
 
     function check() {
         var password = document.getElementById("pw").value;
-        if (hash(password + "RANDOM_SUFFIX") === hash("harlow" + "RANDOM_SUFFIX")) {
+        
+        var inputHash = CryptoJS.SHA256(password).toString();
+
+        if (inputHash === correctHash) {
             localStorage.setItem("isAllowed", "true");
+            
             var gate = document.getElementById("gate");
             gate.style.opacity = "0";
             setTimeout(function() {
